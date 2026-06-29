@@ -14,7 +14,7 @@
 
           <div class="flex flex-wrap gap-4 justify-center">
             <a
-              href="https://t.me/@SK_Swimmer"
+              href="https://t.me/SK_Swimmer"
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-center gap-3 px-6 py-3 bg-accent text-background font-semibold rounded-xl hover:bg-accent/90 transition-all duration-300"
