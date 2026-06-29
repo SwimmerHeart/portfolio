@@ -3,10 +3,10 @@
     <Transition name="modal">
       <div
         v-if="project"
-        class="fixed inset-0 z-50 flex items-center justify-center p-4"
+        class="fixed inset-0 z-[60] flex items-center justify-center p-4"
         @click.self="$emit('close')"
       >
-        <div class="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <div class="absolute inset-0 bg-background/10 backdrop-blur-sm" />
         <div class="relative glass max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8">
           <button
             class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-lg bg-accent/10 text-accent hover:bg-accent/20 transition-colors"
@@ -62,13 +62,21 @@
 <script setup lang="ts">
 import type { Project } from '@/data/projects'
 
-defineProps<{
+const props = defineProps<{
   project: Project | null
 }>()
 
 defineEmits<{
   close: []
 }>()
+
+watch(() => props.project, (val) => {
+  document.body.style.overflow = val ? 'hidden' : ''
+})
+
+onUnmounted(() => {
+  document.body.style.overflow = ''
+})
 </script>
 
 <style scoped>
