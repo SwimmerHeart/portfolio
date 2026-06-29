@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   app: {
+    baseURL: '/portfolio/',
     head: {
       title: 'Сергей Кириллов | Frontend-разработчик',
       meta: [
