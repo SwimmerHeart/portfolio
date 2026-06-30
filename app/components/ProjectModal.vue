@@ -7,7 +7,7 @@
         @click.self="$emit('close')"
       >
         <div class="absolute inset-0 bg-background/10 backdrop-blur-sm" />
-        <div class="relative glass max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8">
+        <div class="relative bg-surface border border-accent/10 rounded-2xl shadow-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8">
           <button
             class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-lg bg-accent/10 text-accent hover:bg-accent/20 transition-colors"
             @click="$emit('close')"
